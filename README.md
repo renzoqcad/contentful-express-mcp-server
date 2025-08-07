@@ -66,14 +66,14 @@ Open your Claude Desktop application's configuration file. This file is usually 
           "command": "npx",
           "args": [
             "mcp-remote",
-            "https://contentful-expressjs-mcp-server-1091189192823.us-central1.run.app/mcp"
+            "https://example.com/mcp"
           ]
         }
       }
     }
 
 
-**Important:** Replace `https://contentful-expressjs-mcp-server-1091189192823.us-central1.run.app/mcp` with the actual URL where your Express.js server's `/mcp` endpoint is accessible.
+**Important:** Replace `https://example.com/mcp` with the actual URL where your Express.js server's `/mcp` endpoint is accessible.
 
 After saving the configuration, restart the Claude Desktop application. You should now see "contentful\_mcp\_server" available as an option for running MCP commands.
 
