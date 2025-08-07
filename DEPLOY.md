@@ -29,17 +29,17 @@ This command builds a Docker image named `contentful-express-mcp-server` based o
 
 Once your Docker image is built, you need to push it to Google Container Registry (GCR) so that Cloud Run can access it. Ensure you are authenticated with `gcloud`.
 ```
-gcloud builds submit --tag gcr.io/applydigital-lab-dev/contentful-expressjs-mcp-server
+gcloud builds submit --tag gcr.io/YOUR_PROJECT_ID/contentful-expressjs-mcp-server
 ```
 
-**Important:** The project ID `applydigital-lab-dev` in the image tag `gcr.io/applydigital-lab-dev/contentful-expressjs-mcp-server` should match your actual Google Cloud project ID.
+**Important:** The project ID `YOUR_PROJECT_ID` in the image tag `gcr.io/YOUR_PROJECT_ID/contentful-expressjs-mcp-server` should match your actual Google Cloud project ID.
 
 ### 3. Deploy to Google Cloud Run
 
 After the image is pushed to GCR, you can deploy it to Cloud Run.
 ```
 gcloud run deploy contentful-expressjs-mcp-server
---image gcr.io/applydigital-lab-dev/contentful-expressjs-mcp-server
+--image gcr.io/YOUR_PROJECT_ID/contentful-expressjs-mcp-server
 --platform managed
 --region us-central1
 --allow-unauthenticated
@@ -49,7 +49,7 @@ Let's break down the flags:
 
 * `contentful-expressjs-mcp-server`: This is the name of the Cloud Run service that will be created.
 
-* `--image gcr.io/applydigital-lab-dev/contentful-expressjs-mcp-server`: Specifies the Docker image to deploy from GCR.
+* `--image gcr.io/YOUR_PROJECT_ID/contentful-expressjs-mcp-server`: Specifies the Docker image to deploy from GCR.
 
 * `--platform managed`: Indicates that you want to deploy to the fully managed Cloud Run environment.
 
