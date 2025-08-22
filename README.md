@@ -95,7 +95,7 @@ If you prefer to run the Contentful MCP tools directly on your local machine wit
 
 1.  **Clone the original Contentful MCP Server repository:**
 
-        git clone https://github.com/renzoqcad/contentful-express-mcp-server
+        git clone https://github.com/applydigital/contentful-express-mcp-server
         cd contentful-express-mcp-server
 
 
